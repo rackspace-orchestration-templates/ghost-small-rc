@@ -1,0 +1,72 @@
+schema-version: 1.0.0
+application-family: CMS
+application-name: Ghost
+application-version: 0.5.1
+flavor: Production - RCv3
+flavor-weight: 1
+reach-info:
+  tattoo: https://0b5294b243620310a700-e388a7f3aba385a925111b1fc6f680d4.ssl.cf2.rackcdn.com/ghost-tattoo.png
+  icon-20x20: https://0b5294b243620310a700-e388a7f3aba385a925111b1fc6f680d4.ssl.cf2.rackcdn.com/ghost-icon-20x20.png
+hidden_outputs:
+  - private_key
+  - ghost_user_password
+abstract: |
+  Ghost is an open-source blogging platform written in JavaScript.
+instructions: |
+  #### Getting Started
+
+  Ghost is a new blogging platform dedicated to providing a simple, easy to use
+  approach to blogging. Ghost allows you to write and publish your own blog,
+  giving you the tools to make it easy and even fun to do. It's simple,
+  elegant, and designed so that you can spend less time messing with making
+  your blog work - and more time blogging.
+
+  The first step with your new blog is to navigate to `/ghost/signup` where you
+  will create the your user. Ghost currently only supports one user at this
+  time. After filling out this info, you will be redirected to the admin panel
+  where you can start customizing your blog and adding new posts. To access the
+  admin panel again, navigate to `/ghost`.
+
+  For more information on using Ghost please check out Ghost's [usage
+  forums](https://ghost.org/forum/using-ghost/).
+
+  #### Plugins
+
+  Ghost is new and is still in heavy development. However, there are already
+  some plugins and themes to help customize your experience. Checkout the Ghost
+  [Marketplace](http://marketplace.ghost.org/) for links. Users coming from
+  WordPress may also be interested in this [WordPress
+  plugin](http://wordpress.org/plugins/ghost/) to help migrate data from
+  WordPress to Ghost.
+
+  #### Details of Your Setup
+  This deployment was stood up using [Ansible](http://www.ansible.com/).
+  Once the stack has been deployed, Ansible will not run again unless you update the
+  stack. **Any changes made to the configuration may be overwritten when the stack
+  is updated.**
+
+  Ghost was installed from the latest version available.  It has been installed to
+  /var/www/ghost/.  Ghost is running on port 2368.
+
+  [nginx](https://www.nginx.com/) has been configured to serve static content
+  for Ghost, as well as to forward all HTTP and HTTPS connections to Ghost.
+
+  MySQL is being hosted on a Cloud Database instance, running MySQL 5.1.
+  Backups for MySQL are provided by [Holland](http://wiki.hollandbackup.org/),
+  which is running on the server.
+
+  #### Logging in via SSH
+  The private key provided with this deployment can be used to log in as
+  root via SSH. We have an article on how to use these keys with [Mac OS X and
+  Linux](http://www.rackspace.com/knowledge_center/article/logging-in-with-a-ssh-private-key-on-linuxmac)
+  as well as [Windows using
+  PuTTY](http://www.rackspace.com/knowledge_center/article/logging-in-with-a-ssh-private-key-on-windows).
+  This key can be used to log into all servers on this deployment.
+  Additionally, passwordless authentication is configured from the Master
+  server to all secondary servers.
+
+
+description: |
+  The latest version of [Ghost](http://ghost.org/about/) installed with
+  [Nginx](http://wiki.nginx.org/Main/), [Node.js](http://nodejs.org/) and
+  [MySQL 5.5](http://www.mysql.com/about/).
