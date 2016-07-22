@@ -79,12 +79,12 @@ parameters:
       - 64GB Instance
   server_image:
     type: string
-    default: f4bbbce2-50b0-4b07-bf09-96c175a45f4b
+    default: Ubuntu 14.04 LTS (Trusty Tahr) (PVHVM) (Orchestration)
     label: Server Image
     description: Image to use for Ghost
     constraints:
     - allowed_values:
-      - f4bbbce2-50b0-4b07-bf09-96c175a45f4b
+      - Ubuntu 14.04 LTS (Trusty Tahr) (PVHVM) (Orchestration)
   ansible_source:
     type: string
     default: http://catalog.rs-heat.com/ansible-roles/ansible-roles.tar.gz
