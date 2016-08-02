@@ -1,7 +1,7 @@
 heat_template_version: 2015-10-15
 
 description: |
-  #### Production
+  #### Production - RCv3
   The latest version of [Ghost](http://ghost.org/about/) installed with
   [Nginx](http://wiki.nginx.org/Main/), [Node.js](http://nodejs.org/) and
   a Cloud Database running [MySQL 5.1](http://www.mysql.com/about/).
